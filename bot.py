@@ -6,7 +6,7 @@ import os
 # ДАННЫЕ ИЗ ПЕРЕМЕННЫХ ОКРУЖЕНИЯ (на BotHost)
 # ============================================
 TOKEN = "8667946531:AAFA87hpZiHEXp7z3utaW5JassSd9fpLCUA"          # Токен от BotFather
-GAME_URL = os.environ.get('GAME_URL')        # Ссылка на игру (потом вставишь)
+LINK_TO_GAME = os.environ.get('LINK_TO_GAME')        # Ссылка на игру (потом вставишь)
 
 # ============================================
 # НАСТРОЙКА ЛОГИРОВАНИЯ
@@ -58,7 +58,7 @@ def show_game_button(call):
     markup = telebot.types.InlineKeyboardMarkup()
     game_button = telebot.types.InlineKeyboardButton(
         text="ЗАПУСТИТЬ ВИКТОРИНУ", 
-        web_app=telebot.types.WebAppInfo(GAME_URL)  # Открывает игру
+        web_app=telebot.types.WebAppInfo(LINK_TO_GAME)  # Открывает игру
     )
     markup.add(game_button)
     
@@ -76,4 +76,5 @@ def show_game_button(call):
 logging.info("Бот запущен и готов к работе!")
 
 bot.polling(none_stop=True)
+
 
