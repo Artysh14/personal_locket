@@ -5,7 +5,6 @@ import os
 # ============================================
 # ДАННЫЕ ИЗ ПЕРЕМЕННЫХ ОКРУЖЕНИЯ (на BotHost)
 # ============================================
-python
 TOKEN = "8667946531:AAFA87hpZiHEXp7z3utaW5JassSd9fpLCUA"          # Токен от BotFather
 GAME_URL = os.environ.get('GAME_URL')        # Ссылка на игру (потом вставишь)
 
@@ -77,3 +76,4 @@ def show_game_button(call):
 logging.info("Бот запущен и готов к работе!")
 
 bot.polling(none_stop=True)
+
